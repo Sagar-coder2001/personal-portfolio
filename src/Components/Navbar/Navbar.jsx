@@ -183,7 +183,7 @@ const Navbar = () => {
 
                 {/* Mobile Accordion Menu */}
                 <ul className="space-y-4 text-[16px] font-medium text-gray-800 text-center" style={{backgroundColor : bgcolor , color : textcolors}}>
-                  {[...Array(4)].map((_, i) => (
+                  {[...Array(1)].map((_, i) => (
                     <li key={i} className="relative">
                       <button
                         className="w-full text-left px-3 cursor-pointer py-2 flex justify-center items-center rounded hover:bg-[#aacdb3] transition duration-300"
