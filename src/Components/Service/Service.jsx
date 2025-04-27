@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
-import mail from '../../assets/cart.gif'
+import mail from '../../assets/Cart.gif'
 import Cloud from '../../assets/Video.gif'
 import shield from '../../assets/queue.svg'
 
