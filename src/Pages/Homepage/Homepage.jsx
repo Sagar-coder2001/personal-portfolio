@@ -8,6 +8,7 @@ import Service from '../../Components/Service/Service'
 import Blog from '../../Components/Blog/Blog'
 import Testimonials from '../../Components/Testimonials/Testimonials'
 import Experience from '../../Components/Experince/Experience'
+import Skill from '../../Components/Skill/Skill'
 // import Faq from '../../Components/Faq/Faq'
 
 const Homepage = () => {
@@ -22,6 +23,7 @@ const Homepage = () => {
    <Testimonials/>
    {/* <Blog/> */}
    {/* <Faq/> */}
+   <Skill/>
    </>
   )
 }

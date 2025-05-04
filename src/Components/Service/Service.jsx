@@ -3,12 +3,48 @@ import { useSelector } from "react-redux";
 import mail from '../../assets/Cart.gif'
 import Cloud from '../../assets/Video.gif'
 import shield from '../../assets/queue.svg'
+import hero from '../../assets/hero.png'
+import library from '../../assets/library.jpg'
+import chat from '../../assets/chat.gif'
+
+
+
 
 export default function ServicesSection() {
   const bgcolor = useSelector((state) => state.theme.value)
   const bgcolor1 = useSelector((state) => state.theme.navbar)
   const txtcolor = useSelector((state) => state.theme.textcolor)
   const services = [
+    {
+      title: "Student Learning Management System",
+      desc: "A web app where instructors can create and manage courses, while students can enroll, view content, and track progress. Built with role-based access for students and instructors.",
+      img: Cloud,
+      a: "https://github.com/Sagar-coder2001/student-LMS",
+      live: 'https://student-lms-rho.vercel.app/'
+    },
+   
+    {
+      title: "Chat Application in Mern",
+      desc: "This is a full-stack real-time chat application built with the MERN stack (MongoDB, Express, React, Node.js) and Socket.IO for bi-directional, low-latency communication. The app enables users to register, log in, and engage in instant messaging with others in a secure and responsive environment.",
+      img: chat,
+      a: "https://github.com/Sagar-coder2001/Mern-Chat-App",
+      live: 'https://mern-chat-app-xi-ochre.vercel.app/'
+    },
+    {
+      title: "Book Store UI",
+      desc: "This project is a visually appealing, static book store interface built using React and Tailwind CSS. The focus is on delivering a clean, responsive design with interactive elements to enhance user engagement.",
+      img: library,
+      a: "https://github.com/Sagar-coder2001/Book_Store",
+      live: 'https://book-store-six-plum.vercel.app/'
+    },
+    {
+      title: "Metaverse VR UI",
+      desc: "This project is a futuristic, animated Metaverse user interface crafted using React and Tailwind CSS, focused on delivering a highly visual and interactive design. The interface showcases the potential of VR spaces with smooth animations, modern layouts, and immersive hover effects.",
+      img: hero,
+      a: "https://github.com/Sagar-coder2001/World",
+      live: 'https://world-two-orpin.vercel.app/'
+
+    },
     {
       title: "Mern E-Commerce Project",
       desc: "A full-stack e-commerce app where users can browse, add to cart, and place orders. Admins can manage products and view or update orders through a secure dashboard. Built using MongoDB, Express, React, and Node.js.",
@@ -17,18 +53,11 @@ export default function ServicesSection() {
       live: 'https://sagar-e.vercel.app/'
     },
     {
-      title: "Student Learning Management System",
-      desc: "A web app where instructors can create and manage courses, while students can enroll, view content, and track progress. Built with role-based access for students and instructors.",
-      img: Cloud,
-      a: "https://github.com/Sagar-coder2001/student-LMS",
-      live: 'https://student-lms-rho.vercel.app/'
-    },
-    {
       title: "Hotel Queue Managment System",
       desc: "An ongoing project to streamline hotel check-in by managing guest queues digitally, reducing wait times, and improving service efficiency.",
       img: shield,
       a: "https://github.com/Sagar-coder2001/HotelAdminDashboard-Queue"
-    },
+    }
   ];
 
   return (

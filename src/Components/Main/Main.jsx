@@ -3,8 +3,7 @@ import start from '../../assets/6.png';
 import { motion } from "framer-motion";
 import banner from '../../assets/banner-img.png'
 import { FaTwitter, FaInstagram, FaLinkedinIn, FaGoogle, FaWhatsapp, FaGithub } from 'react-icons/fa';
-import google from '../../assets/Google.gif'
-import microsoft from '../../assets/Microsoft.gif'
+import sagar from '../../assets/sagar.pdf'
 
 
 // Component to animate each character
@@ -99,22 +98,23 @@ export default function Main() {
             <img src={google} alt="Google Cloud" className="h-20 sm:h-20 " />
             <img src={microsoft} alt="Microsoft Partner" className="h-20 sm:h-20" />
           </div> */}
-
-                <button
-                    className={`relative group inline-flex items-center px-6 py-2 border rounded-full text-sm font-semibold transition-all duration-300 overflow-hidden 
-      ${bgcolor === 'black' ? 'border-white text-white' : 'border-black text-black'}`}
+                <a
+                    href={sagar} // This path is relative to the public folder
+                    download // HTML5 attribute that triggers file download
+                    className={`relative group inline-flex items-center px-6 py-2 border rounded-full text-sm font-semibold transition-all duration-300 overflow-hidden mt-4
+    ${bgcolor === 'black' ? 'border-white text-white' : 'border-black text-black'}`}
                 >
                     <span
                         className={`relative z-10 transition-all duration-300 
-        ${bgcolor === 'black' ? 'group-hover:text-black' : 'group-hover:text-white'}`}
+      ${bgcolor === 'black' ? 'group-hover:text-black' : 'group-hover:text-white'}`}
                     >
-                        Contact Me
+                        Download CV
                     </span>
                     <span
                         className={`absolute inset-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 z-0 rounded-full 
-        ${bgcolor === 'black' ? 'bg-white' : 'bg-black'}`}
+      ${bgcolor === 'black' ? 'bg-white' : 'bg-black'}`}
                     ></span>
-                </button>
+                </a>
                 <p className="text-gray-600 text-md font-bold md:text-base text-center" style={{ color: textcolors }}>
                     Passionate front-end developer with 1 year of hands-on experience building responsive, user-friendly web interfaces using HTML, CSS, JavaScript, and modern frameworks like React. Focused on clean code, performance, and delivering great user experiences.
                 </p>
