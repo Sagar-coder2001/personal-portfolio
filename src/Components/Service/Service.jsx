@@ -5,7 +5,7 @@ import Cloud from '../../assets/Video.gif'
 import shield from '../../assets/queue.svg'
 import hero from '../../assets/hero.png'
 import library from '../../assets/library.jpg'
-import chat from '../../assets/chat.gif'
+import chat from '../../assets/Chat.gif'
 
 
 
