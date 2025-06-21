@@ -13,7 +13,7 @@ const experiences = [
         role: 'Front End Devloper',
         company: 'Cancer Mitr',
         duration: 'May 2025 - Present',
-        description: 'Developed responsive web applications and CRM software using React.js and Tailwind CSS. Collaborated with designers and backend developers to deliver seamless web experiences.Optimized UI components for performance and cross-browser compatibility.Participated in code reviews and contributed to improving front-end workflows. and manage CRM software for Cancer Mitr.',
+        description: 'Manage CRM software. and building pateint app Collaborated with designers and backend developers to deliver seamless web experiences.Optimized UI components for performance and cross-browser compatibility.Participated in code reviews and contributed to improving front-end workflows.',
     },
 
 ];
