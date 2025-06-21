@@ -3,10 +3,17 @@ import { useSelector } from 'react-redux';
 
 const experiences = [
     {
-        role: 'Front End Devloper (React Js)',
+        role: 'Front End Devloper',
         company: 'Zeal Interactive Services',
-        duration: 'Jun 2024 - Present',
+        duration: 'Jully 2024 - April 2025',
         description: 'Developed responsive, user-friendly interfaces using React.js and Tailwind CSS.Collaborated with designers and backend developers to deliver seamless web experiences.Optimized UI components for performance and cross-browser compatibility.Participated in code reviews and contributed to improving front-end workflows.',
+    },
+
+    {
+        role: 'Front End Devloper',
+        company: 'Cancer Mitr',
+        duration: 'May 2025 - Present',
+        description: 'Developed responsive web applications and CRM software using React.js and Tailwind CSS. Collaborated with designers and backend developers to deliver seamless web experiences.Optimized UI components for performance and cross-browser compatibility.Participated in code reviews and contributed to improving front-end workflows. and manage CRM software for Cancer Mitr.',
     },
 
 ];

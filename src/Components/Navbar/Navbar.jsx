@@ -182,7 +182,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile Accordion Menu */}
-                <ul className="space-y-4 text-[16px] font-medium text-gray-800 text-center" style={{backgroundColor : bgcolor , color : textcolors}}>
+                {/* <ul className="space-y-4 text-[16px] font-medium text-gray-800 text-center" style={{backgroundColor : bgcolor , color : textcolors}}>
                   {[...Array(1)].map((_, i) => (
                     <li key={i} className="relative">
                       <button
@@ -225,7 +225,7 @@ const Navbar = () => {
                               Conatact us
                             </a>
                           </li>
-                </ul>
+                </ul> */}
               </div>
             </motion.div>
           </>

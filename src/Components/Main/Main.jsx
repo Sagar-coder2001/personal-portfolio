@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import start from '../../assets/6.png';
 import { motion } from "framer-motion";
-import banner from '../../assets/banner-img.png'
+import banner from '../../assets/mine.jpeg'
 import { FaTwitter, FaInstagram, FaLinkedinIn, FaGoogle, FaWhatsapp, FaGithub } from 'react-icons/fa';
 import sagar from '../../assets/sagar.pdf'
 
@@ -55,22 +55,28 @@ export default function Main() {
     const headingText = "Hie... I am Sagar Shinde a Front End Developer";
 
     const bgcolor = useSelector((state) => state.theme.navbar);
+    const bgcolor1 = useSelector((state) => state.theme.value)
     const textcolors = useSelector((state) => state.theme.textcolor)
 
 
-    const lightGradient = 'radial-gradient(circle,rgba(245, 245, 245, 1) 4%, rgba(235, 242, 179, 1) 100%)';
-    const darkGradient = 'radial-gradient(circle at center, #0E1027 0%, #000000 100%)';
+    // const lightGradient = 'radial-gradient(circle,rgba(245, 245, 245, 1) 4%, rgba(235, 242, 179, 1) 100%)';
+    // const darkGradient = 'radial-gradient(circle at center, #0E1027 0%, #000000 100%)';
 
     return (
+        <>
         <div
-            className="min-h-screen flex flex-col-reverse lg:flex-row items-center justify-between px-6 md:px-16 py-12 bg-gradient-to-br from-green-100 via-white to-pink-100 bg-cover bg-center bg-no-repeat relative"
+            className="min-h-screen flex flex-col-reverse lg:flex-row items-center justify-between px-6 md:px-16 py-12  bg-cover bg-center bg-no-repeat"
+            // style={{
+            //     backgroundImage: bgcolor === 'black' ? darkGradient : lightGradient
+            // }}
             style={{
-                backgroundImage: bgcolor === 'black' ? darkGradient : lightGradient
+                backgroundColor: bgcolor1,
+                color: textcolors
             }}
         >
             {/* Left section */}
             <div className="max-w-xlmd:text-left space-y-2 flex flex-col items-center justify-center ">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl  font-bold "
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl  font-bold mt-10"
                     style={{ color: textcolors }}>
                     {/* Animate CREATIVE */}
                     <AnimatedText
@@ -146,15 +152,16 @@ export default function Main() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
             >
-                <div className="relative w-60 sm:w-70 md:w-82 lg:w-90">
+                <div className="relative w-70 sm:w-80 md:w-90 lg:w-95 mt-5">
                     <img
                         src={banner}
                         alt="Happy User"
-                        className="w-full object-contain z-10 relative mx-auto"
+                        className="w-100 object-contain z-10 relative mx-auto rounded-3xl"
                     />
                 </div>
             </motion.div>
         </div>
+        </>
     );
 }
 

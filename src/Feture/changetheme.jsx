@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 // Retrieve initial theme from localStorage, or use default
-const storedTheme = localStorage.getItem('theme') || 'white';
+const storedTheme = localStorage.getItem('theme') || 'dark';
 const initialState = storedTheme === 'white' ? {
   value: 'white',
   navbar: '#d3e0dc',

@@ -10,7 +10,7 @@ import chat from '../../assets/Chat.gif'
 
 
 
-export default function ServicesSection() {
+export default function Service() {
   const bgcolor = useSelector((state) => state.theme.value)
   const bgcolor1 = useSelector((state) => state.theme.navbar)
   const txtcolor = useSelector((state) => state.theme.textcolor)
