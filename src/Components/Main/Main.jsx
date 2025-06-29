@@ -1,172 +1,241 @@
-import { useSelector } from 'react-redux';
-import start from '../../assets/6.png';
-import { motion } from "framer-motion";
-import banner from '../../assets/mine.jpeg'
-import { FaTwitter, FaInstagram, FaLinkedinIn, FaGoogle, FaWhatsapp, FaGithub } from 'react-icons/fa';
+// import { useSelector } from 'react-redux';
+// import start from '../../assets/6.png';
+// import { motion } from "framer-motion";
+import banner from '../../assets/mine3.jpeg'
+// import { FaTwitter, FaInstagram, FaLinkedinIn, FaGoogle, FaWhatsapp, FaGithub } from 'react-icons/fa';
 import sagar from '../../assets/sagar.pdf'
 
 
-// Component to animate each character
-const AnimatedText = ({ text, className = "" }) => {
-    const wordAnimation = {
-        hidden: { y: 40, opacity: 0 },
-        visible: (i) => ({
-            y: 0,
-            opacity: 1,
-            transition: {
-                delay: i * 0.2,
-                duration: 0.5,
-                ease: "easeOut",
-            },
-        }),
-    };
+// // Component to animate each character
+// const AnimatedText = ({ text, className = "" }) => {
+//     const wordAnimation = {
+//         hidden: { y: 40, opacity: 0 },
+//         visible: (i) => ({
+//             y: 0,
+//             opacity: 1,
+//             transition: {
+//                 delay: i * 0.2,
+//                 duration: 0.5,
+//                 ease: "easeOut",
+//             },
+//         }),
+//     };
 
-    const words = text.split(" ");
+//     const words = text.split(" ");
 
+//     return (
+//         <div className="flex flex-wrap justify-center md:justify-start gap-2">
+//             {words.map((word, i) => {
+//                 // Apply gradient to first and sixth words
+//                 const isFirst = i === 0;
+//                 const isSixth = word.toUpperCase() === "Sagar";
+
+//                 const gradientClass = isFirst || isSixth
+//                     ? "text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-green-400 via-yellow-400 to-blue-500"
+//                     : "";
+
+//                 return (
+//                     <motion.span
+//                         key={i}
+//                         custom={i}
+//                         initial="hidden"
+//                         animate="visible"
+//                         variants={wordAnimation}
+//                         className={`inline-block ${className} ${gradientClass}`}
+//                     >
+//                         {word}
+//                     </motion.span>
+//                 );
+//             })}
+//         </div>
+//     );
+// };
+
+// export default function Main() {
+//     const headingText = "Hie... I am Sagar Shinde a Front End Developer";
+
+//     const bgcolor = useSelector((state) => state.theme.navbar);
+//     const bgcolor1 = useSelector((state) => state.theme.value)
+//     const textcolors = useSelector((state) => state.theme.textcolor)
+
+
+//     // const lightGradient = 'radial-gradient(circle,rgba(245, 245, 245, 1) 4%, rgba(235, 242, 179, 1) 100%)';
+//     // const darkGradient = 'radial-gradient(circle at center, #0E1027 0%, #000000 100%)';
+
+//     return (
+//         <>
+//         <div
+//             className="min-h-screen flex flex-col-reverse lg:flex-row items-center justify-between px-6 md:px-16 py-12  bg-cover bg-center bg-no-repeat"
+//             // style={{
+//             //     backgroundImage: bgcolor === 'black' ? darkGradient : lightGradient
+//             // }}
+//             style={{
+//                 backgroundColor: bgcolor1,
+//                 color: textcolors
+//             }}
+//         >
+//             {/* Left section */}
+//             <div className="max-w-xlmd:text-left space-y-2 flex flex-col items-center justify-center ">
+//                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl  font-bold mt-10"
+//                     style={{ color: textcolors }}>
+//                     {/* Animate CREATIVE */}
+//                     <AnimatedText
+//                         text={headingText}
+//                         className="text-4xl"
+//                     />
+
+
+//                     <br />
+
+//                     {/* Animate STUDIO with gradient + symbol */}
+//                     {/* <span className="inline-flex items-center text-black md-ml-25">
+//                         <span className="text-lime-400 text-8xl md:text-7xl mr-6">
+//                             <img src={start} alt="" className='w-15 h-15' />
+//                         </span>
+//                         <AnimatedText
+//                             text="STUDIO"
+//                             className="bg-gradient-to-r from-black via-lime-500 to-lime-300 bg-clip-text text-transparent"
+//                         />
+//                     </span> */}
+//                 </h1>
+
+//                 {/* Logos */}
+//                 {/* <div className="flex gap-6 items-center justify-center lg:justify-start">
+//             <img src={google} alt="Google Cloud" className="h-20 sm:h-20 " />
+//             <img src={microsoft} alt="Microsoft Partner" className="h-20 sm:h-20" />
+//           </div> */}
+//                 <a
+//                     href={sagar} // This path is relative to the public folder
+//                     download // HTML5 attribute that triggers file download
+//                     className={`relative group inline-flex items-center px-6 py-2 border rounded-full text-sm font-semibold transition-all duration-300 overflow-hidden mt-4
+//     ${bgcolor === 'black' ? 'border-white text-white' : 'border-black text-black'}`}
+//                 >
+//                     <span
+//                         className={`relative z-10 transition-all duration-300 
+//       ${bgcolor === 'black' ? 'group-hover:text-black' : 'group-hover:text-white'}`}
+//                     >
+//                         Download CV
+//                     </span>
+//                     <span
+//                         className={`absolute inset-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 z-0 rounded-full 
+//       ${bgcolor === 'black' ? 'bg-white' : 'bg-black'}`}
+//                     ></span>
+//                 </a>
+//                 <p className="text-gray-600 text-md font-bold md:text-base text-center" style={{ color: textcolors }}>
+//                     Passionate front-end developer with 1 year of hands-on experience building responsive, user-friendly web interfaces using HTML, CSS, JavaScript, and modern frameworks like React. Focused on clean code, performance, and delivering great user experiences.
+//                 </p>
+
+//                 {/* Social Media Icons */}
+//                 <div className="flex gap-4 mt-6 justify-center lg:justify-start">
+//                     <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer">
+//                         <IconBox icon={<FaInstagram />} />
+//                     </a>
+//                     <a href="https://github.com/Sagar-coder2001" target="_blank" rel="noopener noreferrer">
+//                         <IconBox icon={<FaGithub />} />
+//                     </a>
+//                     <a href="https://linkedin.com/in/sagar-shinde-052b00193" target="_blank" rel="noopener noreferrer">
+//                         <IconBox icon={<FaLinkedinIn />} />
+//                     </a>
+//                     <a href="mailto:youremail@gmail.com">
+//                         <IconBox icon={<FaGoogle />} />
+//                     </a>
+//                     <a href="https://wa.me/yourwhatsappphonenumber" target="_blank" rel="noopener noreferrer">
+//                         <IconBox icon={<FaWhatsapp />} />
+//                     </a>
+//                 </div>
+//             </div>
+
+//             {/* Right section */}
+//             <motion.div
+//                 className="w-full lg:w-1/2 flex justify-center relative mb-8 lg:mb-0 mt-5"
+//                 initial={{ opacity: 0, y: -40 }}
+//                 animate={{ opacity: 1, y: 0 }}
+//                 transition={{ duration: 1 }}
+//             >
+//                 <div className="relative w-70 sm:w-80 md:w-90 lg:w-95 mt-5">
+//                     <img
+//                         src={banner}
+//                         alt="Happy User"
+//                         className="w-100 object-contain z-10 relative mx-auto rounded-3xl"
+//                     />
+//                 </div>
+//             </motion.div>
+//         </div>
+//         </>
+//     );
+// }
+
+// const IconBox = ({ icon }) => (
+//     <div className="bg-white shadow-md rounded-full w-10 h-10 flex items-center justify-center text-blue-600 hover:text-white hover:bg-blue-600 transition">
+//         {icon}
+//     </div>
+// );
+
+import { Download, Mail, Github, Linkedin } from "lucide-react"
+
+const Hero = () => {
     return (
-        <div className="flex flex-wrap justify-center md:justify-start gap-2">
-            {words.map((word, i) => {
-                // Apply gradient to first and sixth words
-                const isFirst = i === 0;
-                const isSixth = word.toUpperCase() === "Sagar";
+        <section id="home" className="min-h-screen flex items-center">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20">
+                <div className="flex flex-col-reverse lg:flex-row gap-12 items-center">
+                    <div className="text-white space-y-6">
+                        <div className="space-y-4">
+                            <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+                                Hi, I'm{" "}
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
+                                    Sagar Shinde
+                                </span>
+                            </h1>
+                            <h2 className="text-xl md:text-2xl text-gray-300">Front End Developer</h2>
+                            <p className="text-lg text-gray-200 max-w-lg">
+                                I'm a passionate Frontend Developer focused on crafting clean, responsive, and engaging web interfaces. I specialize in building modern web applications using technologies like React, Next.js, Tailwind CSS, and JavaScript.
+                            </p>
+                        </div>
 
-                const gradientClass = isFirst || isSixth
-                    ? "text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-green-400 via-yellow-400 to-blue-500"
-                    : "";
+                        <div className="flex flex-wrap gap-4" style={{margin:'10px 0px'}}>
+                            
+                            <button className="border border-white/20 text-white bg-white/10 hover:bg-purple-500 px-6 py-3 rounded-lg flex items-center gap-2 transition-all duration-200" style={{padding:'4px 8px'}}>
+                                <Download className="h-4 w-4" />
+                                <a
+                                    href={sagar}
+                                    download
+                                >
 
-                return (
-                    <motion.span
-                        key={i}
-                        custom={i}
-                        initial="hidden"
-                        animate="visible"
-                        variants={wordAnimation}
-                        className={`inline-block ${className} ${gradientClass}`}
-                    >
-                        {word}
-                    </motion.span>
-                );
-            })}
-        </div>
-    );
-};
+                                    Download CV
 
-export default function Main() {
-    const headingText = "Hie... I am Sagar Shinde a Front End Developer";
+                                </a>
+                            </button>
+                        </div>
 
-    const bgcolor = useSelector((state) => state.theme.navbar);
-    const bgcolor1 = useSelector((state) => state.theme.value)
-    const textcolors = useSelector((state) => state.theme.textcolor)
+                        <div className="flex space-x-4" style={{padding:'0px 8px'}}>
+                            <a href="https://github.com/Sagar-coder2001" className="text-gray-400 hover:text-purple-500 transition-colors" style={{padding:'0px 8px'}}>
+                                <Github size={24}  />
+                            </a>
+                            <a href="https://linkedin.com/in/sagar-shinde-052b00193" className="text-gray-400 hover:text-purple-500 transition-colors" style={{padding:'0px 8px'}}>
+                                <Linkedin size={24} />
+                            </a>
+                        </div>
+                    </div>
 
-
-    // const lightGradient = 'radial-gradient(circle,rgba(245, 245, 245, 1) 4%, rgba(235, 242, 179, 1) 100%)';
-    // const darkGradient = 'radial-gradient(circle at center, #0E1027 0%, #000000 100%)';
-
-    return (
-        <>
-        <div
-            className="min-h-screen flex flex-col-reverse lg:flex-row items-center justify-between px-6 md:px-16 py-12  bg-cover bg-center bg-no-repeat"
-            // style={{
-            //     backgroundImage: bgcolor === 'black' ? darkGradient : lightGradient
-            // }}
-            style={{
-                backgroundColor: bgcolor1,
-                color: textcolors
-            }}
-        >
-            {/* Left section */}
-            <div className="max-w-xlmd:text-left space-y-2 flex flex-col items-center justify-center ">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl  font-bold mt-10"
-                    style={{ color: textcolors }}>
-                    {/* Animate CREATIVE */}
-                    <AnimatedText
-                        text={headingText}
-                        className="text-4xl"
-                    />
-
-
-                    <br />
-
-                    {/* Animate STUDIO with gradient + symbol */}
-                    {/* <span className="inline-flex items-center text-black md-ml-25">
-                        <span className="text-lime-400 text-8xl md:text-7xl mr-6">
-                            <img src={start} alt="" className='w-15 h-15' />
-                        </span>
-                        <AnimatedText
-                            text="STUDIO"
-                            className="bg-gradient-to-r from-black via-lime-500 to-lime-300 bg-clip-text text-transparent"
-                        />
-                    </span> */}
-                </h1>
-
-                {/* Logos */}
-                {/* <div className="flex gap-6 items-center justify-center lg:justify-start">
-            <img src={google} alt="Google Cloud" className="h-20 sm:h-20 " />
-            <img src={microsoft} alt="Microsoft Partner" className="h-20 sm:h-20" />
-          </div> */}
-                <a
-                    href={sagar} // This path is relative to the public folder
-                    download // HTML5 attribute that triggers file download
-                    className={`relative group inline-flex items-center px-6 py-2 border rounded-full text-sm font-semibold transition-all duration-300 overflow-hidden mt-4
-    ${bgcolor === 'black' ? 'border-white text-white' : 'border-black text-black'}`}
-                >
-                    <span
-                        className={`relative z-10 transition-all duration-300 
-      ${bgcolor === 'black' ? 'group-hover:text-black' : 'group-hover:text-white'}`}
-                    >
-                        Download CV
-                    </span>
-                    <span
-                        className={`absolute inset-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 z-0 rounded-full 
-      ${bgcolor === 'black' ? 'bg-white' : 'bg-black'}`}
-                    ></span>
-                </a>
-                <p className="text-gray-600 text-md font-bold md:text-base text-center" style={{ color: textcolors }}>
-                    Passionate front-end developer with 1 year of hands-on experience building responsive, user-friendly web interfaces using HTML, CSS, JavaScript, and modern frameworks like React. Focused on clean code, performance, and delivering great user experiences.
-                </p>
-
-                {/* Social Media Icons */}
-                <div className="flex gap-4 mt-6 justify-center lg:justify-start">
-                    <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer">
-                        <IconBox icon={<FaInstagram />} />
-                    </a>
-                    <a href="https://github.com/Sagar-coder2001" target="_blank" rel="noopener noreferrer">
-                        <IconBox icon={<FaGithub />} />
-                    </a>
-                    <a href="https://linkedin.com/in/sagar-shinde-052b00193" target="_blank" rel="noopener noreferrer">
-                        <IconBox icon={<FaLinkedinIn />} />
-                    </a>
-                    <a href="mailto:youremail@gmail.com">
-                        <IconBox icon={<FaGoogle />} />
-                    </a>
-                    <a href="https://wa.me/yourwhatsappphonenumber" target="_blank" rel="noopener noreferrer">
-                        <IconBox icon={<FaWhatsapp />} />
-                    </a>
+                    <div className="flex justify-center lg:justify-end lg:ml-20">
+                        <div className="relative">
+                            <div className="w-90 h-90 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 p-1">
+                                <div className="w-full h-full rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center">
+                                    <img
+                                        src={banner}
+                                        alt="Profile"
+                                        className="w-full h-full rounded-full object-cover"
+                                    />
+                                </div>
+                            </div>
+                            <div className="absolute -top-4 -right-8 w-20 h-20 bg-blue-500/20 rounded-full animate-pulse"></div>
+                            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-purple-500/20 rounded-full animate-pulse delay-1000"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            {/* Right section */}
-            <motion.div
-                className="w-full lg:w-1/2 flex justify-center relative mb-8 lg:mb-0 mt-5"
-                initial={{ opacity: 0, y: -40 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1 }}
-            >
-                <div className="relative w-70 sm:w-80 md:w-90 lg:w-95 mt-5">
-                    <img
-                        src={banner}
-                        alt="Happy User"
-                        className="w-100 object-contain z-10 relative mx-auto rounded-3xl"
-                    />
-                </div>
-            </motion.div>
-        </div>
-        </>
-    );
+        </section>
+    )
 }
 
-const IconBox = ({ icon }) => (
-    <div className="bg-white shadow-md rounded-full w-10 h-10 flex items-center justify-center text-blue-600 hover:text-white hover:bg-blue-600 transition">
-        {icon}
-    </div>
-);
+export default Hero
